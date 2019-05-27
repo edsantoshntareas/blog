@@ -1,0 +1,38 @@
+{% extende base.html %}
+
+<form class="form-group" method="post">
+	<div class="row">
+		<div class="form-group col-md-12">
+			<strong>
+				<label>
+					{{ form.nombre_usuario.label }}
+				</label>
+			</strong>
+			{{ form.nombre_usuario }}
+		</div>
+	</div>
+	<div class="row">
+		<div class="form-group col-md-12">
+			<strong>
+				<label>
+					{{ form.descripcion.label }}
+				</label>
+			</strong>
+			{{ form.descripcion }}
+		</div>
+	</div>
+	<div class="row">
+		<div class="form-group col-md-12">
+			<strong>
+				<label>
+					{{ form.puntuacion.label }}
+				</label>
+			</strong>
+			{{ form.puntuacion }}
+		</div>
+	</div>
+	{% csrf_token %}
+	<button class="btn btn-primary" type="submit">
+		Agregar
+	</button>
+</form>

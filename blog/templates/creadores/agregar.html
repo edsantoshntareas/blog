@@ -1,0 +1,26 @@
+{% extende base.html %}
+
+<form method="Post" class="form-group">
+	<div class="row">
+		<div class="form-group col-md-12">
+			<strong>
+				<label>
+					{{ form.nombre.label }}
+				</label>
+			</strong>
+			{{ form.nombre }}
+		</div>
+		<div class="form-group col-md-12">
+			<strong>
+				<label>
+					{{ form.email.label }}
+				</label>
+			</strong>
+			{{ form.email }}
+		</div>
+	</div>
+	{% csrf_token %}
+	<button class="btn btn-primary" type="submit">
+		Agregar
+	</button>
+</form>

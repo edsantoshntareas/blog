@@ -1,0 +1,23 @@
+{% extende base.html %}
+{% block title %}Listado de Publicaciones{% endblock %}
+
+{% block body %}
+	<h1>Listado de Publicaciones</h1>
+
+	<table>
+		<thead>
+			<tr>
+				<th>Titulo</th>
+				<th>Fecha de Publicacion</th>
+				<th>Creador</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for publicacion in publicaciones_contexto %}
+				<td>publicacion.titulo</td>
+				<td>publicacion.fecha_pub</td>
+				<td>publicacion.creador</td>
+			{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}

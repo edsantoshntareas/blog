@@ -1,0 +1,29 @@
+{% extende base.html %}
+{% block title %}Listado de Creadores{% endblock %}
+
+{% block body %}
+	<h1>Listado de Creadores</h1>
+
+	<table>
+		<thead>
+			<tr>
+				<th>Nombre</th>
+				<th>Email</th>
+				<th>Acciones</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for creador in creadores_contexto %}
+				<td>creador.nombre</td>
+				<td>creador.email</td>
+				<td>
+					<a href="{ url 'blog:agregar_creador_url' }">
+						<button class="btn btn-info">
+							Perfil
+						</button>
+					</a>
+				</td>
+			{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}
